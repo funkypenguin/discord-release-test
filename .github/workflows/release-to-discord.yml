@@ -14,10 +14,14 @@ jobs:
       uses: SethCohen/github-releases-to-discord@v1.13.1
       with:
         webhook_url: https://discord.com/api/webhooks/1012539231815602217/mjQdYOuy3-jrbtKYoV3RONVtSVmORAbdxlWRcKfflCjcjSEGaB-y_4lv57pVOAWfbZSe
-        color: "50762E"
+        color: "5273134"
         username: "Spanky the ElfBot"
         avatar_url: "https://github.com/spanky-the-elfbot.png"
-        # content: "Hey <@&1119634168314343505>, got some new treetz for you!"
+        content: |
+           Hey dudes, got some new treetz for you!
+
+           I'm a multi-liner
+
         footer_title: "So this is what's up..."
         footer_icon_url: "https://github.com/elfhosted.png"
         footer_timestamp: true                
