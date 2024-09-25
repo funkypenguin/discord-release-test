@@ -1,17 +1,23 @@
+name: notify discord
+
 on:
-    release:
-      types: [published]
+  release:
+    types: [published]
+  workflow_dispatch:
 
 jobs:
-  github-releases-to-discord:
+  sending:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout
-      uses: actions/checkout@v3
+
     - name: Github Releases To Discord
-      uses: sillyangel/releases-to-discord@v1.0.0
+      uses: SethCohen/github-releases-to-discord@v1.13.1
       with:
         webhook_url: https://discord.com/api/webhooks/1012539231815602217/mjQdYOuy3-jrbtKYoV3RONVtSVmORAbdxlWRcKfflCjcjSEGaB-y_4lv57pVOAWfbZSe
-        color: "2105893"
-        username: "Release Changelog"
-        avatar_url: "https://cdn.discordapp.com/avatars/487431320314576937/bd64361e4ba6313d561d54e78c9e7171.png"
+        # color: "50762E"
+        username: "Spanky the ElfBot"
+        avatar_url: "https://github.com/spanky-the-elfbot.png"
+        # content: "Hey <@&1119634168314343505>, got some new treetz for you!"
+        footer_title: "So this is what's up..."
+        footer_icon_url: "https://github.com/elfhosted.png"
+        footer_timestamp: true                
